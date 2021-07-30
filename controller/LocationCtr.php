@@ -1,9 +1,12 @@
 <?php
 
 /**
+ * Součást projektu VOIP access
+ * 
+ * Controller pro práci s daty lokalit
  *
- *
- * @author Petr
+ * 
+ * @author Petr Šauer
  */
 class LocationCtr extends Ctr{
     

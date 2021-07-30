@@ -1,15 +1,12 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of AccessCtr
+ * Součást projektu VOIP access
+ * 
+ * Controller pro práci s přístupovými daty
  *
- * @author Petr
+ * 
+ * @author Petr Šauer
  */
 class AccessCtr extends Ctr{
     

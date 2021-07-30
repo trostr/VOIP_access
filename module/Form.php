@@ -1,13 +1,18 @@
 <?php
 
-
+/**
+ * Nástroj pro tvorbu jednoduchých formulářů 
+ * 
+ * Modul bez pevných vazeb na další moduly (třídy)
+ *
+ * 
+ * @author Petr Šauer
+ */
 class Form {
     
     protected $data;
     protected $name;
-
-
-   
+ 
     /**
      * Nastaví základní atributy formuláře
      * @param string $id Id formuláře

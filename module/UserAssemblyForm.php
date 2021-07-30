@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Soubor přednastavených formulářů 
+ * 
+ * Modul vyžaduje třídu Form
+ *
+ * 
+ * @author Petr Šauer
+ */
 class UserAssemblyForm extends Form{
     
     /**

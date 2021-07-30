@@ -1,9 +1,12 @@
 <?php
 
 /**
- * Description of NaKopecWs
+ * Součást projektu VOIP access
+ * 
+ * View seznamu lokalit
  *
- * @author Petr
+ * 
+ * @author Petr Šauer
  */
 class LocationWs extends StrankaWs{
     

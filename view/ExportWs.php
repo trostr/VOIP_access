@@ -1,9 +1,12 @@
 <?php
 
 /**
- * Description of ExpotrWs
+ * Součást projektu VOIP access
+ * 
+ * View exportu tabulek do csv souboru
  *
- * @author Petr
+ * 
+ * @author Petr Šauer
  */
 class ExportWs extends StrankaWs{
     

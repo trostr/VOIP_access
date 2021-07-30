@@ -1,22 +1,18 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of zakladWs
+ /**
+ * Součást projektu VOIP access
+ * 
+ * Základní view
  *
- * @author Petr
+ * 
+ * @author Petr Šauer
  */
 class StrankaWs {
     protected $folder;
     protected $user = "";
 
     public function __construct() {
-    
         $local = new Location();
         $this->folder = "/".$local->getFolder();
         $this->getSessUser();
@@ -41,8 +37,6 @@ class StrankaWs {
                     <meta name="description" content="<?= $data['popisek'] ?>">
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <link rel="icon" href="phone-icon.png" type="image/x-icon">
-                    <!-- <link rel="stylesheet" href="webStyle2.css"> -->
                     <!-- Latest compiled and minified CSS -->
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                     <!-- jQuery library -->
@@ -63,41 +57,11 @@ class StrankaWs {
             <?php
     }
     
-    protected function navigation($parametr) {
-        ?>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <ul class="nav navbar-nav">
-                    <li><a href="<?= $this->editLink('zvadlo')?>" >Zvadlo</a></li>
-                    <!-- <li><a href="<?= $this->editLink('podle-vody')?>" >Podle vody</a></li> -->
-                    <!-- <li><a href="<?= $this->editLink('na-pokec')?>" >Na pokec</a></li> -->
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <?php 
-                    if($this->user) { ?>
-                        
-                    <li><a href="<?= $this->editLink('profil/'.$parametr[0])?>" ><span class="glyphicon glyphicon-user"></span> <?= $this->user ?></a></li>
-                    <li><a href="<?= $this->editLink('logout')?>" ><span class="glyphicon glyphicon-log-out"></span> Odhlásit</a></li>
-                    <?php
-                    }
-                    else {
-                    ?>
-                    <li><a href="<?= $this->editLink('prihlaseni/'.$parametr[0])?>" ><span class="glyphicon glyphicon-log-in"></span> Prihlásit</a></li>
-                    <?php
-                    }
-                    ?>
-                </ul>
-            </div>    
-        </nav>       
-        <?php
-    }
-    
-    
     protected function body($data) {
         ?>
         
         <div class="container cont-mar minh">
-        <h2>Na pokec na kopec</h2>
+        <h2>VOIP access</h2>
         
         </div>
         <?php        
@@ -109,7 +73,7 @@ class StrankaWs {
             <!-- <div class="patka" id="patka"> -->
             <div class="container-fluid bg-4 cont-padd">
                 <div class="container">
-                    <p>&copy 2017 - TROSTR projects - <a href="mailto:admin@trostr.cz">Admin kontakt</a></p>
+                    <p>&copy 2017 - Petr Šauer - <a href="mailto:petr.strelec@email.cz">Admin kontakt</a></p>
                 </div>    
             </div>
         </footer>
@@ -121,7 +85,6 @@ class StrankaWs {
     
     public function show($data) {
         $this->header($data);
-        //$this->navigation($data['parametr']);
         $this->body($data);
         $this->heel();
     }

@@ -1,9 +1,12 @@
 <?php
 
 /**
- * Description of Tables
+ * Nástroj pro tvorbu jednoduchých tabulek 
+ * 
+ * Modul bez pevných vazeb na další moduly (třídy)
  *
- * @author Petr
+ * 
+ * @author Petr Šauer
  */
 class Tables {
     
@@ -19,6 +22,7 @@ class Tables {
         $str .= '>';
         return $str;
     }
+    
     
     protected function buildRow($data) {
         foreach ($data as $value) {

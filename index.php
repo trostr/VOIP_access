@@ -13,9 +13,9 @@ function autoloadFunction($class)
         require("module/" . $class . ".php");
 }
 spl_autoload_register("autoloadFunction");
-// nastaveni lokalnich parametru a pripojeni databeze
-$local = new Location();
-$local->setDb();
+// nastaveni lokalnich parametru a pripojeni databaze
+//$local = new Location();
+//$local->setDb();
 // smerovani url
 $router = new RouterCtr();
 $router->process($_SERVER['REQUEST_URI']);

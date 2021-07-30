@@ -1,15 +1,12 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of DeviceFormWs
+ * Součást projektu VOIP access
+ * 
+ * View formuláře zařízení
  *
- * @author Petr
+ * 
+ * @author Petr Šauer
  */
 class DeviceFormWs extends StrankaWs{
     
@@ -27,12 +24,15 @@ class DeviceFormWs extends StrankaWs{
             if(isset($data['remove'])) {
                 if($data['remove']) {
                     ?>
-                    <p><a href="<?= $this->editLink('location/'.$data['parametr'][1].'/device/remove/'.$data['parametr'][4])?>">Remove this device</a></p>
+                    <p><a href="<?= $this->editLink('location/'.
+                            $data['parametr'][1].'/device/remove/'.
+                            $data['parametr'][4])?>">Remove this device</a></p>
                     <?php
                 }
             }
             ?>
-            <p><a href="<?= $this->editLink('location/'.$data['parametr'][1]).'/device'?>">Back to device list</a></p>
+            <p><a href="<?= $this->editLink('location/'.$data['parametr'][1]).
+                    '/device'?>">Back to device list</a></p>
         </div>
         <?php        
     }
